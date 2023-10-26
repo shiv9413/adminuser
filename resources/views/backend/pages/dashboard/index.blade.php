@@ -31,7 +31,7 @@ Dashboard Page - Admin Panel
   <div class="row">
     <div class="col-lg-8">
         <div class="row">
-            <div class="col-md-6 mt-5 mb-3">
+            <!-- <div class="col-md-6 mt-5 mb-3">
                 <div class="card">
                     <div class="seo-fact sbg1">
                         <a href="{{ route('admin.roles.index') }}">
@@ -42,20 +42,20 @@ Dashboard Page - Admin Panel
                         </a>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="col-md-6 mt-md-5 mb-3">
                 <div class="card">
                     <div class="seo-fact sbg2">
                         <a href="{{ route('admin.admins.index') }}">
                             <div class="p-4 d-flex justify-content-between align-items-center">
-                                <div class="seofct-icon"><i class="fa fa-user"></i> Admins</div>
+                                <div class="seofct-icon"><i class="fa fa-user"></i> Users</div>
                                 <h2>{{ $total_admins }}</h2>
                             </div>
                         </a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 mb-3 mb-lg-0">
+            <!-- <div class="col-md-6 mb-3 mb-lg-0">
                 <div class="card">
                     <div class="seo-fact sbg3">
                         <div class="p-4 d-flex justify-content-between align-items-center">
@@ -64,7 +64,7 @@ Dashboard Page - Admin Panel
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
   </div>
