@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="{{ asset('backend/assets/css/typography.css') }}">
 <link rel="stylesheet" href="{{ asset('backend/assets/css/default-css.css') }}">
 <link rel="stylesheet" href="{{ asset('backend/assets/css/styles.css') }}">
+<link rel="stylesheet" href="{{ asset('backend/assets/css/custom.css') }}">
 <link rel="stylesheet" href="{{ asset('backend/assets/css/responsive.css') }}">
 <!-- modernizr css -->
 <script src="{{ asset('backend/assets/js/vendor/modernizr-2.8.3.min.js') }}"></script>
