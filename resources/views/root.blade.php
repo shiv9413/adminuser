@@ -27,14 +27,28 @@
 
                 <div class="col-lg-3">
                     <div class="home_form">
-                        <form action="">
+                        <form method="POST" action="{{ route('admin.login.submit') }}">
+                            @csrf
+                            @include('backend.layouts.partials.messages')
                             <div class="form-group">
-                                <input type="email" class="form-control" id="exampleFormControlInput1"
-                                    placeholder="User ID">
+                                <input type="text" class="form-control" id="exampleFormControlInput1"
+                                    placeholder="User ID" name="email">
+                                    <div class="text-danger"></div>
+                                @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
 
                             <div class="form-group">
-                                <input type="password" class="form-control" id="password" placeholder="Password">
+                                <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                                <div class="text-danger"></div>
+                                @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
 
                             <div class="form-check d-flex align-items-center">
@@ -44,7 +58,7 @@
                                 </label>
                             </div>
 
-                            <button type="submit">Log In</button>
+                            <button id="form_submit" type="submit">Sign In <i class="ti-arrow-right"></i></button>
                             <p><a href="#">Forgot ID/Password?</a></p>
                             <h4><a href="#">Security & Help</a> <a href="#">Enroll</a></h4>
 
