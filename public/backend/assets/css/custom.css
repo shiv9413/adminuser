@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: "cnx-regular", Arial, Helvetica, sans-serif;
+}
+
 section#home_banner {
     background-repeat: no-repeat;
     background-size: cover;
@@ -10,11 +14,6 @@ section#home_banner {
 
 }
 
-/* .common_width {
-    max-width: 1450px;
-    margin: auto;
-
-} */
 
 .container {
     max-width: 1450px;
@@ -379,7 +378,7 @@ section#footer .socail p a {
 }
 
 section#footer .socail p a:hover {
-   text-decoration: none;
+    text-decoration: none;
 }
 
 section#footer .socail h3 {
@@ -395,24 +394,1275 @@ section#footer .socail h3 a {
 }
 
 
+section#financial .set {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 380px;
+    position: relative;
+}
+
+section#financial .set a {
+    display: block;
+    font-size: 17px;
+    color: #000;
+    text-decoration: none;
+    font-weight: 300;
+    position: relative;
+    padding-left: 52px;
+    padding-right: 15px;
+}
+
+section#financial .set_box {
+    position: absolute;
+    bottom: 62px;
+    left: 0;
+    right: 0;
+    margin: 0 15px;
+    padding: 8px 0 40px 10px;
+    background: #fff;
+    height: 94px;
+}
+
+section#financial .set a img {
+    width: 45px;
+    display: inline-block;
+    position: absolute;
+    left: 0px;
+}
+
+section#financial {
+    margin-top: 40px;
+}
+
+section#financial h1 {
+    text-align: center;
+    font-size: 48px;
+    line-height: 52px;
+    font-weight: 400;
+}
+
+section#financial h2 {
+    font-size: 18px;
+    text-align: center;
+    font-weight: 300;
+    margin: 12px 0;
+}
+
+section#financial .home {
+    margin-top: 60px;
+    position: relative;
+}
+
+section#financial .home:before {
+    position: absolute;
+    content: "";
+    background-image: url(/images/fina-curve1.png);
+    background-size: cover;
+    width: 100%;
+    height: 41px;
+    top: -5px;
+    z-index: 99;
+    background-repeat: no-repeat;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+
+section#financial .home:after {
+    position: absolute;
+    content: "";
+    background-image: url(/images/fina-curve2.png);
+    background-size: cover;
+    width: 100%;
+    height: 45px;
+    bottom: 0px;
+    z-index: 99;
+    background-repeat: no-repeat;
+    left: 1px;
+    right: 0;
+    margin: auto;
+}
+
+
+section#financial h3 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+section#financial a.btn {
+    margin-top: 40px;
+    color: #fff;
+    background-color: #0052C2;
+}
+
+section#financial a.btn {
+    margin-top: 15px;
+    color: #fff;
+    background-color: #0052C2;
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 0px;
+    padding: 8px 20px;
+}
+
+section#online_bank {
+    background: #F2F2F2;
+    padding: 30px 80px;
+}
+
+section#online_bank h5 a {
+    color: #012169;
+    font-size: 14px;
+    margin-bottom: 12px;
+    display: block;
+    font-weight: 400;
+}
+
+section#online_bank p {
+    color: #595959;
+    font-size: 14px;
+}
+
+section#online_bank h2 {
+    color: #595959;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+section#online_bank .legal-invest-table {
+    background: none;
+    border: solid 1px #ddd;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-bottom: 20px;
+    table-layout: auto;
+    width: 100%;
+    margin-top: 18px;
+}
+
+section#online_bank .legal-invest-table .cell {
+    border: 1px solid #000;
+    border-collapse: collapse;
+    border-spacing: 0;
+    color: #333;
+    font-family: arial;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 9px 22px;
+    text-align: center;
+    line-height: 20px;
+}
+
+section#information h1 {
+    text-align: center;
+    font-size: 48px;
+    line-height: 52px;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+section#information {
+    margin-top: 70px;
+}
+
+section#information .phone_img {
+    height: 390px;
+    background-size: 300px 630px, cover;
+    background-repeat: no-repeat;
+    background-position: 66% 11px, center;
+}
+
+section#information .phone_box h3 {
+    font-size: 36px;
+    font-weight: 500;
+    margin-top: 80px;
+}
+
+section#information .phone_box p {
+
+    font-size: 24px;
+    color: #6B5E51;
+    line-height: 34px;
+    margin-top: 15px;
+}
+
+section#information .phone_box {
+    max-width: 505px;
+    margin: auto;
+}
+
+section#information .phone_box a.btn {
+    font-size: 19px;
+    padding: 8px 20px;
+    background-color: #dc1431;
+    color: #fff;
+    border-radius: 0px;
+    margin-top: 6px;
+}
+
+.information_sec {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.information_sec:before {
+    position: absolute;
+    content: "";
+    background-image: url(/images/info-curve.png);
+    background-size: cover;
+    width: 100%;
+    height: 38px;
+    top: -38px;
+    z-index: 99;
+    background-repeat: no-repeat;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.information_sec .phone_img {
+    height: 320px !important;
+}
+
+.information_sec .phone_box h3 {
+    font-size: 32px !important;
+    color: #fff;
+    font-weight: 400 !important;
+    max-width: 300px;
+    margin-bottom: 20px;
+}
+
+.information_sec .phone_box a.btn {
+    font-size: 18px !important;
+    background-color: transparent !important;
+    border: 1px solid #fff !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* header */
+.header .hed {
+    background: #F2F2F2;
+    color: #000;
+    padding: 6px 0 8px;
+    margin-bottom: 24px;
+}
+
+.header .hed ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.header .hed ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.header .hed ul li a {
+    color: #000;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.header .hed ul li a img {
+    height: 18px;
+}
+
+.header a.logo img {
+    height: 32px;
+    margin-left: 75px;
+}
+
+.header .navbar {
+    margin-top: 15px;
+    padding: 0 75px;
+}
+
+
+.header .navbar ul li.nav-item:first-child {
+    padding-left: 0;
+}
+
+.header .navbar ul li.nav-item {
+    padding: 0 35.3px;
+}
+
+.header .navbar ul li.nav-item:last-child {
+    padding-right: 0;
+}
+
+.header .navbar ul li.nav-item a {
+    color: #000;
+    display: block;
+    font-size: 20px;
+    height: 100%;
+    line-height: inherit;
+    padding: 10px 0 14px;
+    position: relative;
+    border: none;
+    border-bottom: 3px solid transparent;
+
+}
+
+.header .search.float-end i {
+    font-size: 18px;
+    position: relative;
+    top: 2px;
+}
+
+.header .search.float-end {
+    background: transparent;
+    border: navajowhite;
+    padding: 3px 0;
+}
+
+.header .navbar .navbar-nav {
+    border: none;
+}
+
+.header .navbar ul li.nav-item a.active {
+    border-bottom: 3px solid #333;
+}
+
+.header .navbar ul li.nav-item a img {
+    height: 25px;
+}
+
+.showtext {
+    padding: 40px 75px 0;
+    background: #f2f2f2;
+    min-height: 500px;
+}
+
+.showtext h4 {
+    color: #000;
+    font-size: 24px;
+}
+
+.showtext a.shop_all {
+    font-size: 20px;
+    padding: 10px 20px;
+    background-color: #0052C2;
+    margin-top: 24px;
+    display: inline-block;
+    color: #ffff;
+    text-decoration: none;
+    width: 360px;
+    text-align: center;
+}
+
+.Signature_div a {
+    font-size: 18px;
+}
+
+.showtext ul.Credit li {
+    margin-bottom: 26px;
+}
+
+.showtext ul.Credit li i {
+    font-size: 27px;
+    margin-right: 12px;
+    color: #626262;
+
+}
+
+.showtext .tips h4 {
+    max-width: 360px;
+}
+
+.showtext ul li {
+    margin-bottom: 10px;
+}
+
+.showtext ul li a {
+    color: #0073CF;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.showtext ul {
+    padding: 0;
+    list-style: none;
+}
+
+.showtext a {
+    color: #0073CF;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.showtext .Manage {
+    border-top: 1px solid #d3d1d1;
+}
+
+.showtext .Signature_div {
+    border-top: 1px solid #d3d1d1;
+    padding: 10px 0
+}
+
+.showtext .Signature_div a.Signature {
+    font-size: 24px;
+}
+
+.showtext .set {
+    background-color: #fff;
+    box-shadow: 0 2px 4px #d1c9c0;
+    margin-right: 2px;
+    overflow: hidden;
+    padding: 12px 28px 20px;
+    position: relative;
+    width: 100%;
+
+}
+
+.showtext .tips .set {
+    max-width: 250px;
+}
+
+.showtext .set a {
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: 400;
+    display: block;
+}
+
+.showtext .set h6 {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.showtext ul li p {
+    font-size: 18px;
+}
+
+/* ********** Inner Pages Tab Css ********/
+
+section#tab_sec {
+    background: #f2f2f2;
+    padding-top: 25px;
+}
+
+.accounts_tab h1 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+section#tab_sec .nav-link.active {
+    color: #000;
+    background-color: #ffffff;
+    border-radius: 0px !important;
+    border-bottom: 3px solid;
+}
+
+section#tab_sec .nav-link {
+    color: #000;
+    border-radius: 0px !important;
+    font-size: 18px;
+}
+
+.accounts_tab h1 {
+    font-size: 24px;
+    font-weight: 600;
+    padding: 20px 0 30px;
+    margin-bottom: 0;
+}
+
+.accounts_tab h1 i {
+    font-size: 24px;
+    margin: 0 20px;
+}
+
+.accounts_tab h1 a {
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.accounts_tab .set h2 {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.accounts_tab .set p {
+    font-size: 17px;
+    margin: 2px 0 0;
+    color: #0d6efc;
+}
+
+.accounts_tab .set h3 {
+    font-size: 20px;
+    font-weight: 600;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 6px;
+    margin-bottom: 12px;
+}
+
+
+.accounts_tab .set h4 {
+    margin-bottom: 15px;
+    font-size: 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accounts_tab .spacing {
+    padding-right: 90px;
+}
+
+.accounts_tab .set h4 a {
+    text-decoration: none;
+}
+
+
+.accounts_tab .set h5 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #0d6efd;
+}
+
+.accounts_tab .bg {
+    background: #F2F2F2;
+    padding: 15px 0;
+}
+
+section#tab_sec ul#pills-tab {
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+}
+
+
+.transition_tab h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin: 18px 0;
+}
+
+.transition_tab .form-group label {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.transition_tab .form-group input {
+    height: 50px;
+    border: 1px solid #aaa;
+}
+
+.transition_tab .form-group select {
+    height: 50px;
+    border: 1px solid #aaa;
+}
+
+.transition_tab .form-group {
+    position: relative;
+}
+
+.transition_tab .form-group button {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    height: 50px;
+    width: 50px;
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    -webkit-text-stroke: 1px;
+}
+
+.transition_tab .fiter_btn p {
+    margin-bottom: 0;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.transition_tab .fiter_btn {
+    margin-top: 33px;
+}
+
+.transition_tab .fiter_btn p i {
+    font-size: 28px;
+    vertical-align: sub;
+    -webkit-text-stroke: 1px;
+}
+
+.transition_tab ul {
+    list-style: none;
+    padding-left: 0;
+    text-align: end;
+    margin: 30px 0 15px;
+}
+
+.transition_tab ul li {
+    display: inline-block;
+    position: relative;
+}
+
+.transition_tab ul li:not(:last-child) {
+    margin-right: 22px;
+}
+
+.transition_tab ul li:not(:last-child):after {
+    content: "";
+    position: absolute;
+    background: #0d6efd;
+    width: 1.2px;
+    height: 15px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: -13px;
+}
+
+.transition_tab ul li a {
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.transition_tab th {
+    font-size: 16px;
+    padding: 18px 10px;
+}
+
+.transition_tab th i {
+    -webkit-text-stroke: 1px;
+}
+
+.transition_tab td {
+    padding: 20px 10px !important;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.transition_tab td a {
+    display: block;
+    text-decoration: none;
+    margin-top: 2px;
+}
+
+.transition_tab td .form-check input {
+    border: 2px solid #aaa;
+    width: 22px;
+    height: 22px;
+    border-radius: 3px !important;
+}
+
+.tab_bg_color {
+    background: #fff;
+    padding: 0 10px;
+}
+
+.add_coupon {
+    border: 1px solid;
+    max-width: 250px;
+    text-align: center;
+    padding: 5px;
+    margin: 15px auto 0;
+}
+
+.add_coupon span {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.add_coupon h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.add_coupon p {
+    font-size: 14px;
+    margin-bottom: 0;
+    line-height: 18px;
+}
+
+.add_coupon img {
+    height: 100px;
+}
+
+.add_coupon a.btn {
+    display: block;
+    background-color: #DC1431;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 0px;
+    width: 130px;
+    margin: auto;
+}
+
+.goal_box {
+    text-align: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 12px;
+    margin-top: 30px;
+    padding: 10px 0 18px;
+}
+
+.goal_box i {
+    font-size: 60px;
+}
+
+.goal_box h3 {
+    font-size: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 12px;
+    margin-bottom: 0;
+}
+
+.goal_box h3 a {
+    text-decoration: none;
+}
+
+.hed.account_head {
+    margin-bottom: 0;
+    padding: 0px 0;
+}
+
+.head.accout_bg {
+    background: #f2f2f2;
+}
+
+.head.accout_bg .hed ul li a {
+    font-size: 16px;
+}
+
+.head.accout_bg .hed ul li a.active {
+    background: #fff;
+}
+
+.hed.account_head .navbar {
+    padding: 0px;
+    margin-top: 10px !important;
+}
+
+.head.accout_bg .hed ul li a {
+    padding: 12px 15px;
+}
+
+.accout_logo {
+    background: #dc1431;
+    padding: 40px 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.accout_logo a.logo img {
+    height: 32px;
+    margin-left: 0px;
+}
+
+
+
 
 /** Large devices (desktops, less than 1600px) **/
-@media (max-width: 1599.98px) {}
+@media (max-width: 1599.98px) {
+    .header .navbar ul li.nav-item {
+        padding: 0 32px;
+    }
+
+}
 
 /** Large devices (desktops, less than 1400px) **/
-@media (max-width: 1399.98px) {}
+
+@media (max-width: 1399.98px) {
+
+    .transition_tab table.table {
+        width: 1200px;
+    }
+
+    section#home_banner {
+        padding: 16px 0 25px;
+    }
+
+    section#home_banner .heading h2 {
+        font-size: 32px;
+        line-height: 34px;
+    }
+
+    .atm_add {
+        width: 238px;
+    }
+
+    .home_form {
+        width: 238px;
+    }
+
+    .header .hed ul li {
+        margin-right: 9px;
+    }
+
+    .header .navbar ul li.nav-item {
+        padding: 0 17px;
+    }
+
+}
 
 /** Large devices (desktops, less than 1200px) **/
-@media (max-width: 1199.98px) {}
+@media (max-width: 1199.98px) {
+    
+
+    .hed.account_head .navbar {
+        margin-top: 0px !important;
+    }
+
+    .head.accout_bg {
+        background: transparent;
+    }
+
+    .head.accout_bg .hed ul li {
+        margin-right: 5px;
+    }
+
+    .head.accout_bg .hed ul li a {
+        font-size: 14px;
+    }
+
+    .hed.account_head {
+        padding: 0px 0 !important;
+    }
+
+    .goal_box i {
+        font-size: 45px;
+    }
+
+    .add_coupon h3 {
+        font-size: 18px;
+    }
+    
+    .goal_box h3 {
+        font-size: 15px;
+    }
+
+    .transition_tab th {
+        font-size: 14px;
+        padding: 12px 10px;
+    }
+
+    .transition_tab td {
+        font-size: 14px;
+        padding: 12px 10px;
+    }
+
+    .transition_tab ul li a {
+        font-size: 15px;
+    }
+
+    .transition_tab .fiter_btn {
+        margin-top: 26px;
+    }
+
+    .transition_tab .fiter_btn p {
+        font-size: 16px;
+    }
+
+    .transition_tab .form-group button {
+        top: 28px;
+        height: 45px;
+        width: 45px;
+        font-size: 16px;
+    }
+
+    .transition_tab .form-group input {
+        height: 45px;
+        font-size: 14px;
+    }
+
+    .transition_tab .form-group label {
+        font-size: 14px;
+    }
+
+    .transition_tab .form-group select {
+        height: 45px;
+        font-size: 14px;
+    }
+
+    .transition_tab h2 {
+        font-size: 24px;
+        margin: 12px 0;
+    }
+
+    .accounts_tab .spacing {
+        padding-right: 30px;
+    }
+    
+    section#tab_sec .nav-link {
+        font-size: 15px;
+    }    
+
+    .accounts_tab .set h3 {
+        font-size: 18px;
+    }
+    
+    .accounts_tab .set h4 {
+        margin-bottom: 12px;
+        font-size: 14px;
+    }
+    
+    .accounts_tab .set h5 {
+        margin-bottom: 12px;
+        font-size: 15px;
+    }
+
+    .accounts_tab .set p {
+        font-size: 15px;
+    }
+
+    .accounts_tab .set h2 {
+        font-size: 28px;
+    }
+
+    .accounts_tab h1 a {
+        font-size: 16px;
+    }   
+
+    .accounts_tab h1 i {
+        font-size: 21px;
+    }
+    
+    
+
+    .accounts_tab h1 {
+        font-size: 20px;
+        padding: 20px 0 20px;
+    }
+
+    .showtext {
+        padding: 40px 20px 0;
+    }
+
+    .header .navbar ul li.nav-item {
+        padding: 0 9px;
+    }
+
+    .header .hed {
+        padding: 6px 20px 8px;
+    }
+
+    .header a.logo img {
+        height: 30px;
+        margin-left: 20px;
+    }
+
+    .header .navbar {
+        padding: 0 20px;
+    }
+
+    .atm_add {
+        width: 270px;
+    }
+
+    .home_form {
+        width: 270px;
+    }
+}
 
 /**  Medium devices (tablets, less than 992px) **/
-@media (max-width: 991.98px) {}
+@media (max-width: 991.98px) {
+
+    .head.accout_bg .hed ul li {
+        margin-right: 0px;
+    }
+
+    .accounts_tab .set h3 {
+        margin-top: 12px;
+    }
+
+
+    .mob_nav .mobile-buttons a {
+        border: 2px solid #dc1532;
+        height: 44px;
+        display: inline-block;
+        padding: 13px 8px;
+        padding-left: 8px;
+        border-radius: 4px;
+        color: #dc1532;
+        font-size: 13px;
+        line-height: 13px;
+        padding-left: 43px;
+        position: relative;
+    }
+
+    .mob_nav .mobile-buttons a img {
+        position: absolute;
+        left: 6px;
+        top: 4px;
+    }
+
+    .mob_nav .mobile-buttons {
+        display: flex;
+    }
+
+    .mob_nav .mobile-buttons a img {
+        margin-right: 10px;
+    }
+
+    .mob_nav .mobile-buttons li {
+        width: auto;
+        margin-right: 30px;
+    }
+
+    .mob_nav .mobile-buttons li:last-child a {
+        border: 2px solid #0073cf;
+        color: #0073cf;
+    }
+
+    .mob_nav {
+        padding: 40px 30px;
+    }
+
+    .mob_nav ul {
+        max-width: 500px;
+        margin: auto;
+        list-style: none;
+        padding: 0;
+    }
+
+    .mob_nav ul li a img {
+        height: 32px;
+    }
+
+    .mob_nav ul li {
+        width: 49%;
+        display: inline-block;
+        margin: 12px 0;
+    }
+
+    .mob_nav ul li a {
+        color: #0073CF;
+        font-size: 16px;
+        text-decoration: navajowhite;
+    }
+
+    .atm_add {
+        width: 210px;
+        margin: auto;
+        float: inherit;
+    }
+
+    .home_form {
+        width: 210px;
+        margin: auto;
+        float: inherit;
+    }
+
+    .header .hed {
+        padding: 0;
+        background: transparent;
+        margin-bottom: 0;
+    }
+
+    .navbar-toggler {
+        position: absolute;
+        right: 12px;
+        top: -30px;
+        color: #DC1431;
+        outline: none !important;
+        font-size: 24px;
+        padding: 0;
+        box-shadow: none !important;
+    }
+
+    .header a.logo img {
+        margin-left: 12px;
+    }
+
+    .header div.navbar,
+    .header .tab-content {
+        display: none;
+    }
+
+    .header {
+        padding: 35px 0;
+    }
+
+    .header .head {
+        order: 2;
+    }
+
+    .header .navbar-collapse {
+
+        background: #F2F2F2;
+        border-top: 1px solid #ccc;
+        margin: 40px -32px 0;
+    }
+
+    .header .navbar-collapse .Wealth {
+        padding: 30px 90px;
+    }
+
+    .header .hed ul li {
+        width: 50%;
+        float: left;
+        margin: 0 0 14px;
+        font-size: 18px;
+    }
+
+    .header .hed ul li a {
+        font-size: 18px;
+    }
+
+    .header a.login {
+        position: absolute;
+        right: 60px;
+        top: 36px;
+        color: #dc1431;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 17px;
+        border-right: 2px solid;
+        padding: 0 14px;
+    }
+
+    .header .navbar-collapse form button {
+        position: absolute;
+        right: 0;
+        color: #012169;
+        background-color: #fff;
+        border: 1px solid #012169;
+        line-height: 45px;
+        width: 115px;
+        border-radius: 30px;
+        font-size: 20px;
+        padding: 0;
+        height: 50px;
+    }
+
+    .header .navbar-collapse form input {
+        height: 48px;
+        border-radius: 4px;
+        background-color: #fff;
+        width: 100%;
+        padding: 0 20px;
+        border: 1px solid #626262;
+    }
+
+    .header .navbar-collapse .mainsearch {
+        padding: 12px 12px;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .header .navbar-collapse form {
+        text-align: center;
+        max-width: 500px;
+        margin: auto;
+        padding-right: 130px;
+        position: relative;
+    }
+}
 
 /** Small devices (landscape phones, less than 768px)**/
-@media (max-width: 767.98px) {}
+@media (max-width: 767.98px) {
+
+    .accounts_tab h1 a {
+        font-size: 14px;
+    }
+
+    .accounts_tab h1 i {
+        font-size: 17px;
+        margin: 0 14px;
+    }
+
+    .accounts_tab h1 {
+        font-size: 18px;
+        padding: 10px 0 10px;
+    }
+
+    .header .navbar-collapse .Wealth {
+        padding: 10px 60px;
+    }
+
+    .header .hed ul li {
+        width: 100%;
+    }
+}
 
 /** Small devices (landscape phones, less than 575px)**/
-@media (max-width: 575.98px) {}
+@media (max-width: 575.98px) {
+
+    section#tab_sec .nav-link {
+        font-size: 14px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    section#tab_sec ul#pills-tab {
+        justify-content: space-between;
+    }
+
+
+    .mob_nav .mobile-buttons li {
+        width: auto;
+        margin-right: 14px;
+    }
+
+    .mob_nav ul li a img {
+        height: 28px;
+    }
+
+    .header a.logo img {
+        height: 22px;
+    }
+
+    .header {
+        padding: 15px 0;
+    }
+
+    .navbar-toggler {
+        top: -27px;
+    }
+
+    .header a.login {
+        top: 15px;
+    }
+
+    .header .navbar-collapse {
+        margin: 15px -32px;
+    }
+}
 
 /** Small devices (landscape phones, less than 480px)**/
-@media (max-width: 480px) {}
+@media (max-width: 480px) {
+    .mob_nav .mobile-buttons a {
+        padding: 5px 8px;
+        padding-left: 43px;
+    }
+
+    .mob_nav .mobile-buttons a img {
+        top: 6px;
+    }
+
+    .mob_nav {
+        padding: 40px 25px;
+    }
+
+    .header a.logo img {
+        height: 19px;
+    }
+
+    .header a.logo img {
+        margin-left: 0px;
+    }
+
+    .header a.login {
+        top: 14px;
+    }
+}

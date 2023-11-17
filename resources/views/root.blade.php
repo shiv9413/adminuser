@@ -174,6 +174,157 @@
         </section>
     </div>
 
+    <!-- ******** Financial Section ********* -->
+
+   <section id="financial">
+      <div class="container">
+         <h1>Financial guidance for every stage of life.</h1>
+         <h2>Better Money Habits® is here to help with your decisions along the way.</h2>
+
+         <div class="home">
+
+            <div class="owl-carousel financial owl-theme">
+
+            <div class="item">
+                <div class="set" style="background-image: url('{{ asset('backend/assets/images/card1.jpg') }}')">
+                    <div class="set_box">
+                        <a href="#"><img src="{{ asset('backend/assets/images/f1.svg') }}" alt="">Pay off credit card debt faster</a>
+                    </div>
+                </div>
+                </div>
+
+                <div class="item">
+                    <div class="set" style="background-image: url('{{ asset('backend/assets/images/card2.jpg') }}')">
+                        <div class="set_box">
+                            <a href="#"><img src="{{ asset('backend/assets/images/f2.svg') }}" alt="">6 simple steps to jump-start your emergency fund</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="set" style="background-image: url('{{ asset('backend/assets/images/card3.jpg') }}')">
+                        <div class="set_box">
+                            <a href="#"><img src="{{ asset('backend/assets/images/f3.svg') }}" alt="">What is a CD and how do they work?</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                <div class="set" style="background-image: url('{{ asset('backend/assets/images/card4.jpg') }}')">
+                    <div class="set_box">
+                        <a href="#"><img src="{{ asset('backend/assets/images/f4.svg') }}" alt="">Buying a home within your comfort zone</a>
+                    </div>
+                </div>
+                </div>
+
+
+            </div>
+         </div>
+
+         <h3>Explore more topics and build your financial know-how.</h3>
+         <div class="text-center">
+            <a href="#" class="btn">Visit Better Money Habits®</a>
+         </div>
+
+      </div>
+   </section>
+
+   <!-- ******** Your news and information ********* -->
+   <div class="container">
+      <section id="information">
+
+         <h1>Your news and information</h1>
+         <div class="row">
+            <div class="col-lg-6">
+               <div class="phone_box">
+                  <h3>Level up your account security</h3>
+                  <p>Watch your security meter rise as you take action against fraud. See it in the Security
+                     Center in Mobile and Online Banking.</p>
+                  <a href="#" class="btn">Check your level</a>
+               </div>
+
+            </div>
+
+            <div class="col-lg-6">
+               <div class="phone_img" style="background-image: url('{{ asset('backend/assets/images/phone1.webp') }}')">
+
+               </div>
+            </div>
+
+         </div>
+
+         <div class="information_sec" style="background-image:url('{{ asset('backend/assets/images/phone_bg.jpg') }}')">
+
+            <div class="row">
+               <div class="col-lg-6">
+                  <div class="phone_box">
+                     <h3>Secure, convenient banking with our Mobile app</h3>
+                     <a href="#" class="btn">Explore our app</a>
+                  </div>
+
+               </div>
+
+               <div class="col-lg-6">
+                  <div class="phone_img" style="background-image: url(images/phone2.png);">
+
+                  </div>
+               </div>
+
+            </div>
+         </div>
+
+      </section>
+   </div>
+
+   <!-- ******** Online Banking ********* -->
+
+   <div class="container">
+      <section id="online_bank">
+
+         <h5><a href="#">Online Banking Service Agreement</a></h5>
+         <p>Investing in securities involves risks, and there is always the potential of losing money when you invest
+            in securities. You should review any planned financial transactions that may have tax or legal
+            implications with your personal tax or legal advisor.</p>
+
+         <p>Securities products are provided by Merrill Lynch, Pierce, Fenner & Smith Incorporated (also referred to
+            as "MLPF&S", or "Merrill"), a registered broker-dealer, registered investment adviser, Member SIPC
+            layer, and a wholly-owned subsidiary of Bank of America Corporation. MLPF&S makes available certain
+            investment products sponsored, managed, distributed or provided by companies that are affiliates of Bank
+            of America Corporation.</p>
+
+         <p>Bank of America Private Bank is a division of Bank of America, N.A., Member FDIC and a wholly owned
+            subsidiary of Bank of America Corporation. Trust and fiduciary services are provided by Bank of America,
+            N.A. and U.S. Trust Company of Delaware. Both are indirect subsidiaries of Bank of America Corporation.
+         </p>
+
+         <p>Insurance Products are offered through Merrill Lynch Life Agency Inc. (MLLA) and/or Banc of America
+            Insurance Services, Inc., both of which are licensed insurance agencies and wholly-owned subsidiaries of
+            Bank of America Corporation.</p>
+
+         <p>Banking, credit card, automobile loans, mortgage and home equity products are provided by Bank of
+            America, N.A. and affiliated banks, Members FDIC and wholly owned subsidiaries of Bank of America
+            Corporation. Credit and collateral are subject to approval. Terms and conditions apply. This is not a
+            commitment to lend. Programs, rates, terms and conditions are subject to change without notice.</p>
+
+         <h2>Investment and insurance products:</h2>
+
+         <table class="legal-invest-table">
+            <tbody>
+               <tr>
+                  <td class="cell">Are Not FDIC Insured</td>
+                  <td class="cell">Are Not Bank Guaranteed</td>
+                  <td class="cell">May Lose Value</td>
+               </tr>
+               <tr>
+                  <td class="cell">Are Not Deposits</td>
+                  <td class="cell">Are Not Insured by Any Federal Government Agency</td>
+                  <td class="cell">Are Not a Condition to Any Banking Service or Activity</td>
+               </tr>
+            </tbody>
+         </table>
+
+      </section>
+   </div>
+
     <!-- ******** Footer Section ********* -->
     <div class="container">
         <section id="footer">
