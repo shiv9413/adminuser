@@ -83,6 +83,7 @@ Admins - Admin Panel
                                         onclick="event.preventDefault(); document.getElementById('delete-form-{{ $admin->id }}').submit();">
                                             Delete
                                         </a>
+                                          <a class="btn btn-warning text-white" href="{{ route('admin.admins.edit', $admin->id) }}">Add Transaction</a>
                                         <form id="delete-form-{{ $admin->id }}" action="{{ route('admin.admins.destroy', $admin->id) }}" method="POST" style="display: none;">
                                             @method('DELETE')
                                             @csrf

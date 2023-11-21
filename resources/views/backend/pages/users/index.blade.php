@@ -78,7 +78,6 @@ Users - Admin Panel
                                         onclick="event.preventDefault(); document.getElementById('delete-form-{{ $user->id }}').submit();">
                                             Delete
                                         </a>
-
                                         <form id="delete-form-{{ $user->id }}" action="{{ route('admin.users.destroy', $user->id) }}" method="POST" style="display: none;">
                                             @method('DELETE')
                                             @csrf
