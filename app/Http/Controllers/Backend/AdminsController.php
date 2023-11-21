@@ -52,14 +52,14 @@ class AdminsController extends Controller
         return view('backend.pages.admins.create', compact('roles'));
     }
 
-    public function listTransactions()
+    public function listTransactions($id)
     {
         if (is_null($this->user) || !$this->user->can('admin.create')) {
             abort(403, 'Sorry !! You are Unauthorized to create any admin !');
         }
 
-        $admins = Admin::all();
-        return view('backend.pages.admins.transaction.index', compact('admins'));
+        $history = Transactions::where('user_id',$id)->orderBy('id', 'desc')->get();
+        return view('backend.pages.admins.transaction.index', compact('history','id'));
     }
 
     public function createTransactions(Request $request)
@@ -106,7 +106,50 @@ class AdminsController extends Controller
         }
 
         session()->flash('success', 'History Created !!');
-        return redirect()->route('admin.admins.index');
+        return back();
+    }
+
+    public function updateTransactions(Request $request)
+    {
+        $validatedData = $request->validate([
+            'amount' => 'required|numeric',
+            'date' => 'required|date',
+            'transaction_type' => 'required|in:credit,debit',
+            'description' => 'required|string',
+        ]);
+
+        $txn = Transactions::findOrFail($request->txn_id);
+
+        $admin = Admin::findOrFail($txn->user_id);
+
+        $available_amount = 0;
+
+        if($validatedData['transaction_type'] == 'debit') {
+            if($admin->total_balance < 1){
+                abort(403, 'Sorry !! Total Balance Zero, Can not create debit history !');
+            }
+            if($validatedData['amount'] > $admin->total_balance){
+                abort(403, 'Sorry !! Total Balance less than debit amount');
+            }
+            $available_amount = $admin->total_balance - $validatedData['amount'];
+        } else {
+            $available_amount = $admin->total_balance + $validatedData['amount'];
+        }
+
+        // Update the admin's transaction details
+        $txn->update([
+            'amount' => $validatedData['amount'],
+            'date' => $validatedData['date'],
+            'transaction_type' => $validatedData['transaction_type'],
+            'available_balance' => $available_amount,
+            'description' => $validatedData['description'],
+        ]);
+
+        $admin->total_balance = $available_amount;
+        $admin->save();
+
+        session()->flash('success', 'History Updated !!');
+        return back();
     }
 
     /**

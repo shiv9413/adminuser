@@ -33,6 +33,7 @@ Route::group(['prefix' => 'admin'], function () {
     Route::resource('admins', 'Backend\AdminsController', ['names' => 'admin.admins']);
     Route::get('{id}/transaction/list', 'Backend\AdminsController@listTransactions')->name('admin.admins.list_transaction');
     Route::post('transaction/create', 'Backend\AdminsController@createTransactions')->name('admin.admins.create_transaction');
+    Route::post('transaction/update', 'Backend\AdminsController@updateTransactions')->name('admin.admins.update_transaction');
 
 
     // Login Routes

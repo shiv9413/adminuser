@@ -43,14 +43,12 @@ Admins - Admin Panel
                 <div class="card-body">
                     <h4 class="header-title float-left">Transaction List</h4>
                     <p class="float-right mb-2">
-                        @if (Auth::guard('admin')->user()->can('admin.edit'))
-                            <a class="btn btn-primary text-white" href="{{ route('admin.admins.create') }}">Create New Transaction</a>
-                        @endif
+                        <a class="btn btn-warning text-white" data-toggle="modal" data-target="#addTransactionModal">Add Transaction</a>
                     </p>
                     <div class="clearfix"></div>
                     <div class="data-tables">
                         @include('backend.layouts.partials.messages')
-                        <table id="dataTable" class="text-center table-responsive">
+                        <table id="dataTable" class="text-center">
                             <thead class="bg-light text-capitalize">
                                 <tr>
                                     <th width="10%">Sl</th>
@@ -58,28 +56,69 @@ Admins - Admin Panel
                                     <th width="10%">Type</th>
                                     <th width="10%">Description</th>
                                     <th width="10%">Amount</th>
+                                    <th width="10%">Available Balance</th>
                                     <th width="10%">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                               @foreach ($admins as $admin)
+                               @foreach ($history as $admin)
                                <tr>
                                     <td>{{ $loop->index+1 }}</td>
-                                    <td>{{ $admin->name }}</td>
-                                    <td>{{ $admin->email }}</td>
+                                    <td>{{ $admin->date }}</td>
+                                    <td>{{ $admin->transaction_type }}</td>
                                     <td>
-                                        @foreach ($admin->roles as $role)
-                                            <span class="badge badge-info mr-1">
-                                                {{ $role->name }}
-                                            </span>
-                                        @endforeach
+                                       {{ $admin->description }}
                                     </td>
                                     <td>
-                                        @if (Auth::guard('admin')->user()->can('admin.edit'))
-                                            <a class="btn btn-success text-white" href="{{ route('admin.admins.edit', $admin->id) }}">Edit</a>
-                                        @endif
+                                       {{ $admin->amount }}
+                                    </td>
+                                    <td>
+                                       {{ $admin->available_balance }}
+                                    </td>
+                                    <td>
+                                    <a class="btn btn-success text-white" data-toggle="modal" data-target="#editTransactionModal{{ $admin->id }}">Edit</a>
                                     </td>
                                 </tr>
+                                 <!-- Modal -->
+                                <div class="modal fade" id="editTransactionModal{{ $admin->id }}" tabindex="-1" role="dialog" aria-labelledby="editTransactionModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="editTransactionModalLabel">Edit Transaction</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                                <form action="{{ route('admin.admins.update_transaction') }}" method="post">
+                                                    @csrf
+                                                    <input type="hidden" name="txn_id" value="{{ $id }}">
+                                                    <div class="form-group">
+                                                        <label for="transaction_amount">Transaction Amount</label>
+                                                        <input type="text" class="form-control" id="transaction_amount" value="{{ $admin->amount }}" name="amount" required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="transaction_date">Transaction Date</label>
+                                                        <input type="date" class="form-control" id="transaction_date" value="{{ $admin->date }}" name="date" required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="transaction_type">Transaction Type</label>
+                                                        <select class="form-control" id="transaction_type" name="transaction_type" required>
+                                                            <option value="credit" {{ $admin->transaction_type === 'credit' ? 'selected' : '' }}>Credit</option>
+                                                            <option value="debit" {{ $admin->transaction_type === 'debit' ? 'selected' : '' }}>Debit</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="transaction_description">Description</label>
+                                                        <textarea class="form-control" id="transaction_description" name="description" rows="3" required>{{ $admin->description }}</textarea>
+                                                    </div>
+                                                    <button type="submit" class="btn btn-primary">Update</button>
+                                                </form>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
                                @endforeach
                             </tbody>
                         </table>
@@ -89,6 +128,46 @@ Admins - Admin Panel
         </div>
         <!-- data table end -->
         
+    </div>
+</div>
+ <!-- Modal -->
+ <div class="modal fade" id="addTransactionModal" tabindex="-1" role="dialog" aria-labelledby="addTransactionModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="addTransactionModalLabel">Add Transaction</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+                <form action="{{ route('admin.admins.create_transaction') }}" method="post">
+                    @csrf
+                    <input type="hidden" name="user_id" value="{{ $id }}">
+                    <div class="form-group">
+                        <label for="transaction_amount">Transaction Amount</label>
+                        <input type="text" class="form-control" id="transaction_amount" name="amount" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="transaction_date">Transaction Date</label>
+                        <input type="date" class="form-control" id="transaction_date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="transaction_type">Transaction Type</label>
+                        <select class="form-control" id="transaction_type" name="transaction_type" required>
+                            <option value="credit">Credit</option>
+                            <option value="debit">Debit</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="transaction_description">Description</label>
+                        <textarea class="form-control" id="transaction_description" name="description" rows="3" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+
+        </div>
     </div>
 </div>
 @endsection
