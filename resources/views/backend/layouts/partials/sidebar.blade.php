@@ -24,6 +24,15 @@
                     </li>
                     @endif
 
+                    @if ($usr->can('transaction.view'))
+                    <li class="active">
+                        <a href="javascript:void(0)" aria-expanded="true"><i class="ti-dashboard"></i><span>transaction</span></a>
+                        <ul class="collapse">
+                            <li class="{{ Route::is('transaction.view') ? 'active' : '' }}"><a href="{{ route('admin.admins.list_transaction', $usr->id) }}">Transaction</a></li>
+                        </ul>
+                    </li>
+                    @endif
+
                     <!-- @if ($usr->can('role.create') || $usr->can('role.view') ||  $usr->can('role.edit') ||  $usr->can('role.delete'))
                     <li>
                         <a href="javascript:void(0)" aria-expanded="true"><i class="fa fa-tasks"></i><span>

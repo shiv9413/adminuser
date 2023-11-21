@@ -85,6 +85,15 @@ class RolePermissionSeeder extends Seeder
                     'profile.edit',
                 ]
             ],
+            [
+                'group_name' => 'transactions',
+                'permissions' => [
+                    // profile Permissions
+                    'transaction.view',
+                    'transaction.edit',
+                    'transaction.delete',
+                ]
+            ],
         ];
 
 
