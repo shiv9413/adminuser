@@ -57,8 +57,8 @@ class AdminsController extends Controller
             abort(403, 'Sorry !! You are Unauthorized to create any admin !');
         }
 
-        $roles  = Role::all();
-        return view('backend.pages.admins.create', compact('roles'));
+        $admins = Admin::all();
+        return view('backend.pages.admins.index', compact('admins'));
     }
 
     /**
