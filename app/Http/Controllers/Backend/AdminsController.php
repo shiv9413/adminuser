@@ -51,6 +51,16 @@ class AdminsController extends Controller
         return view('backend.pages.admins.create', compact('roles'));
     }
 
+    public function createTransactions()
+    {
+        if (is_null($this->user) || !$this->user->can('admin.create')) {
+            abort(403, 'Sorry !! You are Unauthorized to create any admin !');
+        }
+
+        $roles  = Role::all();
+        return view('backend.pages.admins.create', compact('roles'));
+    }
+
     /**
      * Store a newly created resource in storage.
      *
