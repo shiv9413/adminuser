@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('description')->nullable(true);
             $table->float('amount')->default(0);
             $table->float('available_balance')->default(0);
-            $table->foreignId('user_id')->constrained();
+            $table->integer('user_id');
             $table->timestamps();
         });
 

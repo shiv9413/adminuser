@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Spatie\Permission\Models\Role;
+use App\Models\Transactions;
 
 class AdminsController extends Controller
 {
@@ -51,7 +52,7 @@ class AdminsController extends Controller
         return view('backend.pages.admins.create', compact('roles'));
     }
 
-    public function createTransactions()
+    public function listTransactions()
     {
         if (is_null($this->user) || !$this->user->can('admin.create')) {
             abort(403, 'Sorry !! You are Unauthorized to create any admin !');
@@ -59,6 +60,53 @@ class AdminsController extends Controller
 
         $admins = Admin::all();
         return view('backend.pages.admins.transaction.index', compact('admins'));
+    }
+
+    public function createTransactions(Request $request)
+    {
+        if (is_null($this->user) || !$this->user->can('admin.create')) {
+            abort(403, 'Sorry !! You are Unauthorized to create any admin !');
+        }
+
+        $admin = Admin::find($request->user_id);
+
+        // Validation Data
+        $request->validate([
+            'amount' => 'required|numeric', 
+            'date' => 'required|date',
+            'transaction_type' => 'required|in:debit,credit',
+            'description' => 'required|min:5',
+        ]);
+
+        $available_amount = 0;
+
+        if($request->transaction_type == 'debit') {
+            if($admin->total_balance < 1){
+                abort(403, 'Sorry !! Total Balance Zero, Can not create debit history !');
+            }
+            if($request->amount > $admin->total_balance){
+                abort(403, 'Sorry !! Total Balance less than debit amount');
+            }
+            $available_amount = $admin->total_balance - $request->amount;
+        } else {
+            $available_amount = $admin->total_balance + $request->amount;
+        }
+
+        $create = new Transactions();
+        $create->date = $request->date;
+        $create->transaction_type = $request->transaction_type;
+        $create->description = $request->description;
+        $create->amount = $request->amount;
+        $create->available_balance =  $available_amount;
+        $create->user_id = $admin->id;
+
+        if($create->save()){
+            $admin->total_balance = $available_amount;
+            $admin->save();
+        }
+
+        session()->flash('success', 'History Created !!');
+        return redirect()->route('admin.admins.index');
     }
 
     /**
