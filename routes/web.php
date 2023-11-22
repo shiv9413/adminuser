@@ -26,8 +26,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 /**
  * Admin routes
  */
-Route::group(['prefix' => 'admin'], function () {
-    Route::get('/', 'Backend\DashboardController@index')->name('admin.dashboard');
+// Route::group(['prefix' => 'admin'], function () {
+    Route::get('/dashboard', 'Backend\DashboardController@index')->name('admin.dashboard');
     Route::resource('roles', 'Backend\RolesController', ['names' => 'admin.roles']);
     Route::resource('users', 'Backend\UsersController', ['names' => 'admin.users']);
     Route::resource('admins', 'Backend\AdminsController', ['names' => 'admin.admins']);
@@ -47,4 +47,4 @@ Route::group(['prefix' => 'admin'], function () {
     // Forget Password Routes
     Route::get('/password/reset', 'Backend\Auth\ForgetPasswordController@showLinkRequestForm')->name('admin.password.request');
     Route::post('/password/reset/submit', 'Backend\Auth\ForgetPasswordController@reset')->name('admin.password.update');
-});
+// });

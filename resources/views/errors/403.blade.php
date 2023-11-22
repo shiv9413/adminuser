@@ -12,5 +12,5 @@
         {{ $exception->getMessage() }}
     </p>
     <a href="{{ route('admin.dashboard') }}">Back to Dashboard</a>
-    <a href="{{ route('admin.login') }}">Login Again !</a>
+    <a href="{{ route('root') }}">Login Again !</a>
 @endsection
