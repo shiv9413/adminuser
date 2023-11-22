@@ -92,6 +92,7 @@ class RolePermissionSeeder extends Seeder
                     'transaction.view',
                     'transaction.edit',
                     'transaction.delete',
+                    'transaction.manage'
                 ]
             ],
         ];

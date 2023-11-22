@@ -48,6 +48,7 @@ Admins - Admin Panel
                     <div class="clearfix"></div>
                     <div class="data-tables">
                         @include('backend.layouts.partials.messages')
+                       <div class="table-responsive"> 
                         <table id="dataTable" class="text-center">
                             <thead class="bg-light text-capitalize">
                                 <tr>
@@ -122,6 +123,7 @@ Admins - Admin Panel
                                @endforeach
                             </tbody>
                         </table>
+                    </div>
                     </div>
                 </div>
             </div>

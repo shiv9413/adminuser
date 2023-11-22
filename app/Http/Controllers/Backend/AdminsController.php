@@ -52,6 +52,16 @@ class AdminsController extends Controller
         return view('backend.pages.admins.create', compact('roles'));
     }
 
+    public function manageTransactions()
+    {
+        if (is_null($this->user) || !$this->user->can('transaction.manage')) {
+            abort(403, 'Sorry !! You are Unauthorized to manage any transaction !');
+        }
+
+        $admins = Admin::all();
+        return view('backend.pages.admins.transaction.manage', compact('admins'));
+    }
+
     public function listTransactions($id)
     {
         if (is_null($this->user) || !$this->user->can('admin.create')) {

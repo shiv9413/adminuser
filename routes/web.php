@@ -31,6 +31,7 @@ Route::group(['prefix' => 'admin'], function () {
     Route::resource('roles', 'Backend\RolesController', ['names' => 'admin.roles']);
     Route::resource('users', 'Backend\UsersController', ['names' => 'admin.users']);
     Route::resource('admins', 'Backend\AdminsController', ['names' => 'admin.admins']);
+    Route::get('transaction/manage', 'Backend\AdminsController@manageTransactions')->name('admin.admins.manage_transaction');
     Route::get('{id}/transaction/list', 'Backend\AdminsController@listTransactions')->name('admin.admins.list_transaction');
     Route::post('transaction/create', 'Backend\AdminsController@createTransactions')->name('admin.admins.create_transaction');
     Route::post('transaction/update', 'Backend\AdminsController@updateTransactions')->name('admin.admins.update_transaction');
