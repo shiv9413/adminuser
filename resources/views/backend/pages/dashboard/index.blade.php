@@ -7,7 +7,9 @@ Dashboard Page - Admin Panel
 
 
 @section('admin-content')
-
+@php
+     $usr = Auth::guard('admin')->user();
+ @endphp
 <!-- page title area start -->
 <div class="page-title-area">
     <div class="row align-items-center">
@@ -43,6 +45,7 @@ Dashboard Page - Admin Panel
                     </div>
                 </div>
             </div> -->
+            @if ($usr->can('admin.create') || $usr->can('admin.view') ||  $usr->can('admin.edit') ||  $usr->can('admin.delete'))
             <div class="col-md-6 mt-md-5 mb-3">
                 <div class="card">
                     <div class="seo-fact sbg2">
@@ -50,6 +53,19 @@ Dashboard Page - Admin Panel
                             <div class="p-4 d-flex justify-content-between align-items-center">
                                 <div class="seofct-icon"><i class="fa fa-user"></i> Users</div>
                                 <h2>{{ $total_admins }}</h2>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            @endif
+            <div class="col-md-6 mt-md-5 mb-3">
+                <div class="card">
+                    <div class="seo-fact sbg2">
+                        <a href="{{ route('admin.admins.list_transaction', $usr->id) }}">
+                            <div class="p-4 d-flex justify-content-between align-items-center">
+                                <div class="seofct-icon"><i class="fa fa-user"></i> My Transactions</div>
+                                <h2>{{ $total_transactions }}</h2>
                             </div>
                         </a>
                     </div>

@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
+use App\Models\Transactions;
 
 class DashboardController extends Controller
 {
@@ -27,10 +28,11 @@ class DashboardController extends Controller
         if (is_null($this->user) || !$this->user->can('dashboard.view')) {
             abort(403, 'Sorry !! You are Unauthorized to view dashboard !');
         }
-
+        
         $total_roles = count(Role::select('id')->get());
         $total_admins = count(Admin::select('id')->get());
         $total_permissions = count(Permission::select('id')->get());
-        return view('backend.pages.dashboard.index', compact('total_admins', 'total_roles', 'total_permissions'));
+        $total_transactions = count(Transactions::select('id')->where('user_id',$this->user->id)->get());
+        return view('backend.pages.dashboard.index', compact('total_admins', 'total_roles', 'total_permissions','total_transactions'));
     }
 }

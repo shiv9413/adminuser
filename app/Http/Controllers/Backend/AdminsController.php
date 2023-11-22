@@ -64,8 +64,8 @@ class AdminsController extends Controller
 
     public function listTransactions($id)
     {
-        if (is_null($this->user) || !$this->user->can('admin.create')) {
-            abort(403, 'Sorry !! You are Unauthorized to create any admin !');
+        if (is_null($this->user) || !$this->user->can('transaction.view')) {
+            abort(403, 'Sorry !! You are Unauthorized to view transaction details !');
         }
 
         $history = Transactions::where('user_id',$id)->orderBy('id', 'desc')->get();
@@ -91,12 +91,12 @@ class AdminsController extends Controller
         $available_amount = 0;
 
         if($request->transaction_type == 'debit') {
-            if($admin->total_balance < 1){
-                abort(403, 'Sorry !! Total Balance Zero, Can not create debit history !');
-            }
-            if($request->amount > $admin->total_balance){
-                abort(403, 'Sorry !! Total Balance less than debit amount');
-            }
+            // if($admin->total_balance < 1){
+            //     abort(403, 'Sorry !! Total Balance Zero, Can not create debit history !');
+            // }
+            // if($request->amount > $admin->total_balance){
+            //     abort(403, 'Sorry !! Total Balance less than debit amount');
+            // }
             $available_amount = $admin->total_balance - $request->amount;
         } else {
             $available_amount = $admin->total_balance + $request->amount;
@@ -135,15 +135,19 @@ class AdminsController extends Controller
         $available_amount = 0;
 
         if($validatedData['transaction_type'] == 'debit') {
-            if($admin->total_balance < 1){
-                abort(403, 'Sorry !! Total Balance Zero, Can not create debit history !');
-            }
-            if($validatedData['amount'] > $admin->total_balance){
-                abort(403, 'Sorry !! Total Balance less than debit amount');
-            }
+            // if($admin->total_balance < 1){
+            //     abort(403, 'Sorry !! Total Balance Zero, Can not create debit history !');
+            // }
+            // if($validatedData['amount'] > $admin->total_balance){
+            //     abort(403, 'Sorry !! Total Balance less than debit amount');
+            // }
             $available_amount = $admin->total_balance - $validatedData['amount'];
         } else {
-            $available_amount = $admin->total_balance + $validatedData['amount'];
+            if($admin->total_balance > $validatedData['amount']){
+                $available_amount = $admin->total_balance - $validatedData['amount'];
+            } else {
+                $available_amount = $admin->total_balance + $validatedData['amount'];
+            }
         }
 
         // Update the admin's transaction details

@@ -21,9 +21,9 @@ Admins - Admin Panel
     <div class="row align-items-center">
         <div class="col-sm-6">
             <div class="breadcrumbs-area clearfix">
-                <h4 class="page-title pull-left">Users</h4>
+                <h4 class="page-title pull-left">Transaction</h4>
                 <ul class="breadcrumbs pull-left">
-                    <li><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
+                    <li><a href="{{ route('admin.dashboard') }}">Manage Transaction</a></li>
                     <li><span>All Users</span></li>
                 </ul>
             </div>
@@ -42,11 +42,11 @@ Admins - Admin Panel
             <div class="card">
                 <div class="card-body">
                     <h4 class="header-title float-left">Users List</h4>
-                    <p class="float-right mb-2">
+                    <!-- <p class="float-right mb-2">
                         @if (Auth::guard('admin')->user()->can('admin.edit'))
                             <a class="btn btn-primary text-white" href="{{ route('admin.admins.create') }}">Create New User</a>
                         @endif
-                    </p>
+                    </p> -->
                     <div class="clearfix"></div>
                     <div class="data-tables">
                         @include('backend.layouts.partials.messages')

@@ -24,7 +24,7 @@
                     </li>
                     @endif
 
-                    @if ($usr->can('transaction.view'))
+                    @if ($usr->can('transaction.manage'))
                     <li class="active">
                         <a href="javascript:void(0)" aria-expanded="true"><i class="ti-dashboard"></i><span>transaction</span></a>
                         <ul class="collapse">
@@ -33,7 +33,7 @@
                     </li>
                     @endif
 
-                  <!--   @if ($usr->can('role.create') || $usr->can('role.view') ||  $usr->can('role.edit') ||  $usr->can('role.delete'))
+                    <!-- @if ($usr->can('role.create') || $usr->can('role.view') ||  $usr->can('role.edit') ||  $usr->can('role.delete'))
                     <li>
                         <a href="javascript:void(0)" aria-expanded="true"><i class="fa fa-tasks"></i><span>
                             Roles & Permissions

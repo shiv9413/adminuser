@@ -13,7 +13,9 @@ Admins - Admin Panel
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.jqueryui.min.css">
 @endsection
 
-
+@php
+     $usr = Auth::guard('admin')->user();
+ @endphp
 @section('admin-content')
 
 <!-- page title area start -->
@@ -42,9 +44,11 @@ Admins - Admin Panel
             <div class="card">
                 <div class="card-body">
                     <h4 class="header-title float-left">Transaction List</h4>
+                    @if ($usr->can('transaction.manage'))
                     <p class="float-right mb-2">
                         <a class="btn btn-warning text-white" data-toggle="modal" data-target="#addTransactionModal">Add Transaction</a>
                     </p>
+                    @endif
                     <div class="clearfix"></div>
                     <div class="data-tables">
                         @include('backend.layouts.partials.messages')
@@ -58,7 +62,9 @@ Admins - Admin Panel
                                     <th width="10%">Description</th>
                                     <th width="10%">Amount</th>
                                     <th width="10%">Available Balance</th>
+                                    @if ($usr->can('transaction.edit'))
                                     <th width="10%">Action</th>
+                                    @endif
                                 </tr>
                             </thead>
                             <tbody>
@@ -76,9 +82,11 @@ Admins - Admin Panel
                                     <td>
                                        {{ $admin->available_balance }}
                                     </td>
+                                    @if ($usr->can('transaction.edit'))
                                     <td>
                                     <a class="btn btn-success text-white" data-toggle="modal" data-target="#editTransactionModal{{ $admin->id }}">Edit</a>
                                     </td>
+                                    @endif
                                 </tr>
                                  <!-- Modal -->
                                 <div class="modal fade" id="editTransactionModal{{ $admin->id }}" tabindex="-1" role="dialog" aria-labelledby="editTransactionModalLabel" aria-hidden="true">
@@ -93,7 +101,7 @@ Admins - Admin Panel
                                         <div class="modal-body">
                                                 <form action="{{ route('admin.admins.update_transaction') }}" method="post">
                                                     @csrf
-                                                    <input type="hidden" name="txn_id" value="{{ $id }}">
+                                                    <input type="hidden" name="txn_id" value="{{ $admin->id }}">
                                                     <div class="form-group">
                                                         <label for="transaction_amount">Transaction Amount</label>
                                                         <input type="text" class="form-control" id="transaction_amount" value="{{ $admin->amount }}" name="amount" required>
