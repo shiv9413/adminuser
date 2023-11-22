@@ -28,11 +28,17 @@ class DashboardController extends Controller
         if (is_null($this->user) || !$this->user->can('dashboard.view')) {
             abort(403, 'Sorry !! You are Unauthorized to view dashboard !');
         }
-        
+        $user_role = $this->user->hasRole('users');
         $total_roles = count(Role::select('id')->get());
         $total_admins = count(Admin::select('id')->get());
         $total_permissions = count(Permission::select('id')->get());
         $total_transactions = count(Transactions::select('id')->where('user_id',$this->user->id)->get());
-        return view('backend.pages.dashboard.index', compact('total_admins', 'total_roles', 'total_permissions','total_transactions'));
+        $history = Transactions::where('user_id',$this->user->id)->orderBy('id', 'desc')->get();
+        $total_balance = $this->user->total_balance;
+        if($user_role){
+            return view('backend.pages.users.transaction.index', compact('history','total_balance'));
+        } else {
+            return view('backend.pages.dashboard.index', compact('total_admins', 'total_roles', 'total_permissions','total_transactions'));
+        }
     }
 }

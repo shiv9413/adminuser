@@ -230,9 +230,6 @@ section#save_card .box {
     padding-right: 25px;
 }
 
-section#save_card {
-    background-color: #F2F2F2;
-}
 
 section#save_card {
     background-color: #F2F2F2;
@@ -1159,7 +1156,7 @@ section#tab_sec ul#pills-tab {
 
 .accout_logo {
     background: #dc1431;
-    padding: 40px 20px;
+    padding: 20px 20px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -1170,8 +1167,121 @@ section#tab_sec ul#pills-tab {
     margin-left: 0px;
 }
 
+.accout_logo button.navbar-toggler {
+    background: #fff;
+    right: 110px;
+}
 
+.hed.account_head button.navbar-toggler {
+    color: #dc1431;
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.accout_logo a.login {
+    right: 68px !important;
+    border: none !important;
+    padding: 0 8px !important;
+    color: #fff !important;
+}
+
+.accout_logo button.navbar-toggler img {
+    height: 32px;
+}
+
+.hed.second_header ul li.nav-item a {
+    display: inherit;
+    font-size: 16px;
+    color: #fff;
+}
+
+.hed.second_header {
+    background: transparent;
+    margin: 0;
+    padding: 0;
+}
+
+.hed.second_header ul {
+    text-align: end;
+}
+
+.hed.second_header ul li.nav-item.dropdown ul li {
+    display: block;
+    margin: 0px;
+}
+
+.hed.second_header ul li.nav-item.dropdown ul {
+    text-align: initial;
+    padding: 8px 0px;
+    margin-top: 6px;
+}
+
+.hed.second_header ul li a {
+    font-size: 16px;
+    color: #fff;
+}
+
+.hed.second_header ul li {
+    margin-right: 0;
+    position: relative;
+}
+
+.hed.second_header ul li.nav-item.dropdown {
+    padding: 0;
+}
+
+.hed.second_header ul li:not(:last-child) {
+    margin-right: 32px;
+}
+
+.hed.second_header ul li:not(:last-child):after {
+    position: absolute;
+    content: "";
+    background: #fff;
+    width: 19px;
+    height: 1px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    transform: rotate(90deg);
+    right: -25px;
+}
+
+.hed.second_header ul li a img {
+    vertical-align: sub;
+    height: 22px;
+}
+
+.hed.second_header .navbar {
+    padding: 0;
+}
+
+.accout_logo .search.float-end {
+    color: #fff;
+    font-size: 16px;
+}
+
+.accout_logo .search.float-end i {
+    font-size: 20px;
+    margin-left: 4px;
+}
+
+.navbar-expand-lg .navbar-toggler {
+    display: none !important;
+}
+
+.hed.second_header ul li.nav-item.dropdown ul li a {
+    color: #000;
+    padding: 5px 10px;
+}
+
+.hed.second_header ul li.nav-item.dropdown ul li:not(:last-child):after {
+    display: none;
+}
 
 /** Large devices (desktops, less than 1600px) **/
 @media (max-width: 1599.98px) {
@@ -1218,7 +1328,7 @@ section#tab_sec ul#pills-tab {
 
 /** Large devices (desktops, less than 1200px) **/
 @media (max-width: 1199.98px) {
-    
+
 
     .hed.account_head .navbar {
         margin-top: 0px !important;
@@ -1247,7 +1357,7 @@ section#tab_sec ul#pills-tab {
     .add_coupon h3 {
         font-size: 18px;
     }
-    
+
     .goal_box h3 {
         font-size: 15px;
     }
@@ -1303,20 +1413,20 @@ section#tab_sec ul#pills-tab {
     .accounts_tab .spacing {
         padding-right: 30px;
     }
-    
+
     section#tab_sec .nav-link {
         font-size: 15px;
-    }    
+    }
 
     .accounts_tab .set h3 {
         font-size: 18px;
     }
-    
+
     .accounts_tab .set h4 {
         margin-bottom: 12px;
         font-size: 14px;
     }
-    
+
     .accounts_tab .set h5 {
         margin-bottom: 12px;
         font-size: 15px;
@@ -1332,13 +1442,13 @@ section#tab_sec ul#pills-tab {
 
     .accounts_tab h1 a {
         font-size: 16px;
-    }   
+    }
 
     .accounts_tab h1 i {
         font-size: 21px;
     }
-    
-    
+
+
 
     .accounts_tab h1 {
         font-size: 20px;
@@ -1377,6 +1487,159 @@ section#tab_sec ul#pills-tab {
 
 /**  Medium devices (tablets, less than 992px) **/
 @media (max-width: 991.98px) {
+
+    section#online_bank .legal-invest-table .cell {
+        font-size: 14px;
+        padding: 9px 9px;
+    }
+
+    section#online_bank {
+    padding: 20px 30px;
+}
+
+    .information_sec .phone_box a.btn {
+        font-size: 16px !important;
+
+    }
+
+    .information_sec .phone_box h3 {
+        font-size: 24px !important;
+    }
+
+    section#information .phone_img {
+        height: 335px;
+        background-size: 270px 560px, cover;
+        background-position: 95% 11px, center;
+    }
+
+    section#information .phone_box a.btn {
+        font-size: 16px;    
+    }
+
+    section#information .phone_box p {
+        font-size: 16px;
+        line-height: 26px;
+        margin-top: 10px;
+    }
+
+    section#information .phone_box h3 {
+        font-size: 20px;
+        margin-top: 35px;
+    }
+
+    section#information h1 {
+        font-size: 32px;
+        line-height: 20px;
+        margin-bottom: 0px;
+    }
+
+    section#financial h3 {
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    section#financial .home:after {
+        bottom: 33px;
+    }
+
+    section#financial .owl-dots {
+        display: none;
+    }
+
+    section#financial .item {
+        margin: 0 5px;
+    }
+
+    section#financial h1 {
+        font-size: 32px;
+    }
+
+    section#financial h2 {
+        font-size: 16px;
+    }
+
+    section#financial .home {
+        margin-top: 32px;
+    }
+
+    .hed.second_header ul li.nav-item.dropdown ul li {
+        display: block;
+        margin: 0px;
+        width: auto;
+        float: inherit;
+    }
+
+    .hed.second_header .navbar-collapse {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: #fff;
+    }
+
+    .hed.second_header ul li a img {
+        display: none;
+    }
+
+    .hed.second_header ul li:not(:last-child):after {
+        display: none;
+    }
+
+    .hed.second_header ul li:not(:last-child) {
+        margin-right: 0px;
+    }
+
+    .second_head .navbar-collapse {
+        border: none !important;
+        margin: 20px 0px 0 !important;
+    }
+
+    .second_head .navbar-collapse .Wealth {
+        padding: 8px 14px !important;
+    }
+
+    .hed.second_header ul li.nav-item a {
+        font-size: 14px !important;
+        color: #000;
+        padding: 0;
+    }
+
+    .hed.second_header ul {
+        text-align: inherit;
+    }
+
+    .hed.second_header ul li a {
+        font-size: 14px !important;
+        color: #000;
+    }
+
+    .second_head {
+        padding: 0 !important;
+    }
+
+    .hed.account_head .navbar-collapse {
+        margin: 0px 0px 0;
+    }
+
+    .accout_logo a.login {
+        top: 21px !important;
+    }
+
+    .accout_logo button.navbar-toggler {
+        right: 114px;
+        top: -35px;
+        position: absolute;
+        width: 40px;
+        height: 40px;
+    }
+
+    .hed.account_head button.navbar-toggler {
+        top: -56px;
+    }
+
+    .navbar-expand-lg .navbar-toggler {
+        display: block !important;
+    }
 
     .head.accout_bg .hed ul li {
         margin-right: 0px;
@@ -1572,6 +1835,139 @@ section#tab_sec ul#pills-tab {
 /** Small devices (landscape phones, less than 768px)**/
 @media (max-width: 767.98px) {
 
+    section#information h1 {
+        text-align: left;
+    }
+
+    section#save_card:before {
+       display: none;
+    }
+
+    section#save_card::after {
+        display: none;
+     }
+
+    section#save_card .box a i {
+        font-size: 14px;
+    }
+    
+    section#save_card .col-lg-3:not(:last-child)::after {
+       display: none;
+    }
+
+    section#save_card {
+        padding: 30px 0 20px;
+    }
+
+    section#save_card .box a {
+        font-size: 14px;
+    }
+
+    section#save_card .box h2 {
+        font-size: 18px;
+    }
+
+    section#save_card .box h2 br {
+        display: none;
+    }
+
+    section#save_card .box p {
+        font-size: 14px;
+    }
+    
+    
+
+    section#save_card .box img {
+        height: 34px;
+    }
+
+    section#save_card .box {
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+    }
+
+    .comment_box .set a i {
+        font-size: 13px;
+    }
+
+    .comment_box .set {
+        padding: 12px 12px;
+    }
+
+    .comment_box .set a {
+        font-size: 14px;
+    }
+
+    .comment_box .set h2 {
+        font-size: 18px;
+    }
+
+    section#comment .pe-0 {
+        padding-right: calc(var(--bs-gutter-x) * .5) !important;
+    }
+
+    section#comment .ps-0 {
+        padding-left: calc(var(--bs-gutter-x) * .5) !important;
+    }
+
+    .comment_box {
+        padding-left: 20px;
+        height: 280px;
+    }
+    
+    
+
+    section#home_banner .heading a.btn {
+        margin-top: 8px;
+        font-size: 15px;
+    }
+
+    section#home_banner .heading p {
+        max-width: 100%;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    section#home_banner .heading {
+        padding: 0 20px;
+    }
+
+    section#home_banner .heading h2 {
+        font-size: 26px;
+        line-height: 30px;
+        margin-top: 15px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .atm_add {
+        width: 90%;
+        max-width: 100%;
+    }
+
+    .home_form {
+        width: 90%;
+        max-width: 100%;
+        padding: 20px 20px 40px;
+    }
+
+    section#information h1 {
+        font-size: 28px;
+    }
+
+    section#financial h1 {
+        font-size: 28px;
+    }
+
+    section#online_bank {
+        padding: 20px 15px;
+    }
+
+    section#footer {
+        padding: 30px 10px;
+    }
+
     .accounts_tab h1 a {
         font-size: 14px;
     }
@@ -1597,6 +1993,49 @@ section#tab_sec ul#pills-tab {
 
 /** Small devices (landscape phones, less than 575px)**/
 @media (max-width: 575.98px) {
+
+    section#information {
+        padding: 0 10px;
+    }
+
+    section#online_bank .legal-invest-table .cell {
+        padding: 14px 9px;
+        width: 100%;
+        display: inline-block;
+    }
+    
+    section#footer .socail ul li img {
+        height: 23px;
+    }
+
+    section#information .phone_box h3 {
+        margin-top: 18px;
+    }
+
+    section#information {
+        margin-top: 40px;
+    }
+
+    section#information .phone_box h3 {
+        max-width: 100%;
+    }
+    
+    .information_sec {
+        padding: 0 10px;
+    }
+
+    .accout_logo button.navbar-toggler {
+        top: -33px;
+    }
+
+    .hed.account_head button.navbar-toggler {
+        top: -53px;
+    }
+
+
+    .accout_logo a.login {
+        top: 16px !important;
+    }
 
     section#tab_sec .nav-link {
         font-size: 14px;
@@ -1641,6 +2080,28 @@ section#tab_sec ul#pills-tab {
 
 /** Small devices (landscape phones, less than 480px)**/
 @media (max-width: 480px) {
+
+    .accout_logo button.navbar-toggler {
+        right: 86px;
+        top: -30px;
+        width: 35px;
+        height: 35px;
+    }
+
+    .accout_logo a.login {
+        top: 18px !important;
+        font-size: 15px;
+        right: 48px !important;
+    }
+
+    .hed.account_head button.navbar-toggler {
+        top: -51px;
+        right: 0px;
+        width: 35px;
+        height: 35px;
+    }
+
+
     .mob_nav .mobile-buttons a {
         padding: 5px 8px;
         padding-left: 43px;
